@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: eks-fargate
-  namespace: eks-fargate
+  name: eks-demo
+  namespace: eks-demo
 spec:
   selector:
-    app: eks-fargate
+    app: eks-demo
   type: NodePort
   ports:
   - protocol: TCP

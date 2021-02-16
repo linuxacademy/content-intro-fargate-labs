@@ -1,8 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: eks-fargate
-  namespace: eks-fargate
+  name: eks-demo
+  namespace: eks-demo
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/target-type: ip
@@ -13,5 +13,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: eks-fargate
+              serviceName: eks-demo
               servicePort: 80

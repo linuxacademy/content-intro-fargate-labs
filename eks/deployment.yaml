@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eks-fargate
-  namespace: eks-fargate
+  name: eks-demo
+  namespace: eks-demo
   labels:
-    app: eks-fargate
+    app: eks-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: eks-fargate
+      app: eks-demo
   strategy: {}
   template:
     metadata:
       labels:
-        app: eks-fargate
+        app: eks-demo
     spec:
       containers:
-      - name: eks-fargate
-        image: <FILL IN URI HERE>
+      - name: eks-demo
+        image: <INSERT URI HERE>
         ports:
           - containerPort: 80
         resources: {}
